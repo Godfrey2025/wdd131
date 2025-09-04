@@ -1,5 +1,15 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Import Roboto Variable Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Custom Class with Unique Name and Weight */
+.roboto-title {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
 
 /* Reset and base styles */
 * {
