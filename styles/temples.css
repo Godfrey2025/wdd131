@@ -1,0 +1,76 @@
+/* temples.css */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Playfair+Display&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdf6f0;
+  color: #333;
+}
+
+header {
+  background-color: #6b4f4f;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  background-color: #8c6e63;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #a1887f;
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+main h1 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+}
+
+figure {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+footer {
+  background-color: #6b4f4f;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
