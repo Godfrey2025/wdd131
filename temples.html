@@ -8,12 +8,13 @@
     <meta author="Godfrey Gova">
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
-    <script src="script.js"></script>
+    <script src="scripts/temples.js" defer></script>
 </head>
 <body>
     <header>
     <h1>Temple Album</h1>
-    <nav>
+    <button id="hamburger">&#9776;</button> <!-- ☰ symbol -->
+    <nav id="navMenu" class="hidden">
       <a href="#">Home</a>
       <a href="#">Old</a>
       <a href="#">New</a>
@@ -65,6 +66,8 @@
     &copy; <span id="currentyear"></span> Godfrey Gova – Zimbabwe
   </p>
   <p id="lastModified"></p>
+  <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
+
 </footer>
   </body>
 </html>
