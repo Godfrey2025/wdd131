@@ -67,6 +67,8 @@ figcaption {
   font-style: italic;
 }
 
+
+
 footer {
   background-color: #6b4f4f;
   color: white;
@@ -88,3 +90,23 @@ footer {
   display: none;
 }
 
+figure img:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+@media (min-width: 600px) {
+  nav {
+    justify-content: center;
+  }
+
+  }
+  #navMenu {
+    display: flex !important;
+  }
