@@ -1,0 +1,23 @@
+:root {
+  --primary-color: #006400;
+  --accent-color: #ffffff;
+  --font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+.weather-icon::after {
+  content: url("../images/weather-icon.svg");
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
