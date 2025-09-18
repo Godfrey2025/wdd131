@@ -12,9 +12,6 @@ body {
   color: var(--primary-color);
 }
 
-.weather-icon::after {
-  content: url("../images/weather-icon.svg");
-}
 
 @media (max-width: 768px) {
   body {
@@ -54,4 +51,52 @@ footer a {
   text-decoration: none;
 }
 
+.weather img {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .weather img {
+    display: inline;
+  }
+}
+
+
+
+.zimbabwe-flag {
+  width: 300px;
+  height: 180px;
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    #006400 20%,   /* Green */
+    #FFD700 20% 40%, /* Gold */
+    #000000 40% 60%, /* Black */
+    #FFD700 60% 80%, /* Gold */
+    #FF0000 80% 100% /* Red */
+  );
+  border-left: 60px solid white;
+}
+.zimbabwe-flag::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 90px solid transparent;
+  border-bottom: 90px solid transparent;
+  border-left: 60px solid white;
+}
+.zimbabwe-flag::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 30px;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px black;
+}
 
