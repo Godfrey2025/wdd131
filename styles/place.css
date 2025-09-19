@@ -1,6 +1,10 @@
 :root {
-  --primary-color: #006400;
-  --accent-color: #ffffff;
+  --green: #009739;
+  --yellow: #FCE300;
+  --red: #EF3340;
+  --black: #000000;
+  --white: #FFFFFF;
+
   --font-family: 'Segoe UI', sans-serif;
 }
 
@@ -102,3 +106,32 @@ footer a {
   box-shadow: inset 0 0 0 2px black;
 }
 
+body {
+  background-color: var(--white);
+  color: var(--black);
+  font-family: var(--font-family);
+}
+
+header {
+  background-color: var(--green);
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  color: var(--yellow);
+}
+
+.weather {
+  background-color: var(--red);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+}
+.info {
+  background-color: var(--green);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+}
