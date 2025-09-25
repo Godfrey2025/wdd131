@@ -55,8 +55,31 @@ const temples = [
     area: 116642,
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+  },
+  {
+    templeName: "Tokyo Japan",
+    location: "Tokyo, Japan",
+    dedicated: "1980, October, 27", 
+    area: 53500,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo-japan-temple-exterior-1085996-wallpaper.jpg"
+  },
+  {
+    templeName: "Bern Switzerland",
+    location: "Zollikofen, Switzerland",
+    dedicated: "1955, September, 11",
+    area: 8700,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bern-switzerland/400x250/bern-switzerland-temple-lds-273996-wallpaper.jpg"
+  },
+  {
+    templeName: "Rome Italy",
+    location: "Rome, Italy",  
+    dedicated: "2019, March, 10",
+    area: 7000,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-exterior-1406441-wallpaper.jpg"
   }
-  // Add more temple objects if needed
 ];
 
 // Render temple cards
