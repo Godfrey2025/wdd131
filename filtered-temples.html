@@ -1,34 +1,39 @@
-<!doctype html>
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Godfrey Gova|WDD131|Week 2|Temples</title>
-    <meta name="description" content="Explore a curated photo album of temples around the world, showcasing architectural beauty and spiritual significance through optimized images and thoughtful captions.">
-    <meta name="author" content="Godfrey Gova">
-    <link rel="stylesheet" href="styles/filtered-temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css">
-    <script src="scripts/filtered-temples.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtered Temples</title>
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <script src="scripts/filtered-temples.js" defer></script>
 </head>
 <body>
-    <header>
-    <h1>Temple</h1>
-    <button id="hamburger">&#9776;</button> <!-- ☰ symbol -->
+  <header>
+    <h1>Temple Gallery</h1>
+    <button id="hamburger">☰</button>
     <nav id="navMenu" class="hidden">
-      <a href="#">Home</a>
-      <a href="#">Old</a>
-      <a href="#">New</a>
-      <a href="#">Large</a>
-      <a href="#">Small</a>
+      <ul>
+        <li><button id="home">Home</button></li>
+        <li><button id="old">Old</button></li>
+        <li><button id="new">New</button></li>
+        <li><button id="large">Large</button></li>
+        <li><button id="small">Small</button></li>
+      </ul>
     </nav>
   </header>
-  <main id="templeCards"></main>
-   <footer>
-  <p>
-    &copy; <span id="currentyear"></span> Godfrey Gova – Zimbabwe
-  </p>
-  <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
 
-</footer>
-  </body>
+  <main>
+    <div id="temple-cards" class="temple-grid">
+      <!-- Temple cards will be injected here by JavaScript -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; Godfrey Gova – Zimbabwe ©</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+    <p><span id="year"></span></p>
+  </footer>
+
+  <script src="filtered-temples.js"></script>
+</body>
 </html>
