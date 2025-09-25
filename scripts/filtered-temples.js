@@ -1,3 +1,4 @@
+
 // Temple data array
 const temples = [
   {
@@ -55,89 +56,87 @@ const temples = [
     area: 116642,
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
-  },
-  {
-    templeName: "Tokyo Japan",
-    location: "Tokyo, Japan",
-    dedicated: "1980, October, 27", 
-    area: 53500,
-    imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo-japan-temple-exterior-1085996-wallpaper.jpg"
-  },
-  {
-    templeName: "Bern Switzerland",
-    location: "Zollikofen, Switzerland",
-    dedicated: "1955, September, 11",
-    area: 8700,
-    imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bern-switzerland/400x250/bern-switzerland-temple-lds-273996-wallpaper.jpg"
-  },
-  {
-    templeName: "Rome Italy",
-    location: "Rome, Italy",  
-    dedicated: "2019, March, 10",
-    area: 7000,
-    imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-exterior-1406441-wallpaper.jpg"
   }
+  // Add more temple objects if needed
 ];
 
-// Render temple cards
-function displayTemples(templesArray) {
-  const container = document.getElementById("temple-cards");
-  container.innerHTML = "";
+// Utility to parse year from dedicated string
+function getYear(dedicated) {
+  // Format: "YYYY, Month, DD"
+  return parseInt(dedicated.split(',')[0], 10);
+}
 
-  templesArray.forEach(temple => {
-    const card = document.createElement("section");
-    card.classList.add("temple-card");
+// Display temples in a container
+function displayTemples(templeArray) {
+  const container = document.getElementById('temple-cards');
+  if (!container) return;
+  container.innerHTML = '';
+  templeArray.forEach(temple => {
+    let card = document.createElement('section');
+    let name = document.createElement('h2');
+    let location = document.createElement('p');
+    let dedicated = document.createElement('p');
+    let area = document.createElement('p');
+    let image = document.createElement('img');
 
-    card.innerHTML = `
-      <h2>${temple.templeName}</h2>
-      <p><strong>Location:</strong> ${temple.location}</p>
-      <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-      <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
-      <img src="${temple.imageUrl}" alt="Image of ${temple.templeName} Temple" loading="lazy">
-    `;
+    name.textContent = temple.templeName;
+    location.textContent = `Location: ${temple.location}`;
+    dedicated.textContent = `Dedicated: ${temple.dedicated}`;
+    area.textContent = `Area: ${temple.area.toLocaleString()} sq ft`;
+    image.setAttribute('src', temple.imageUrl);
+    image.setAttribute('alt', `Image of ${temple.templeName}`);
+    image.setAttribute('loading', 'lazy');
 
+    card.appendChild(name);
+    card.appendChild(location);
+    card.appendChild(dedicated);
+    card.appendChild(area);
+    card.appendChild(image);
     container.appendChild(card);
   });
 }
 
 // Initial render
-displayTemples(temples);
+document.addEventListener('DOMContentLoaded', () => {
+  displayTemples(temples);
 
-// Navigation filter buttons
-document.getElementById("home").addEventListener("click", () => displayTemples(temples));
+  // Navigation filter buttons
+  document.getElementById("home").addEventListener("click", () => displayTemples(temples));
 
-document.getElementById("old").addEventListener("click", () => {
-  const filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
-  displayTemples(filtered);
+  document.getElementById("old").addEventListener("click", () => {
+    const filtered = temples.filter(t => getYear(t.dedicated) < 1900);
+    displayTemples(filtered);
+  });
+
+  document.getElementById("new").addEventListener("click", () => {
+    const filtered = temples.filter(t => getYear(t.dedicated) > 2000);
+    displayTemples(filtered);
+  });
+
+  document.getElementById("large").addEventListener("click", () => {
+    const filtered = temples.filter(t => t.area > 90000);
+    displayTemples(filtered);
+  });
+
+  document.getElementById("small").addEventListener("click", () => {
+    const filtered = temples.filter(t => t.area < 10000);
+    displayTemples(filtered);
+  });
+
+  // Hamburger menu toggle
+  const hamburger = document.querySelector('#hamburger');
+  const navMenu = document.querySelector('#navMenu');
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+      hamburger.textContent = navMenu.classList.contains('hidden') ? '☰' : '✖';
+    });
+  }
+
+  // Footer date
+  const yearElem = document.querySelector('#year');
+  const lastModifiedElem = document.querySelector('#lastModified');
+  if (yearElem) yearElem.textContent = new Date().getFullYear();
+  if (lastModifiedElem) lastModifiedElem.textContent = document.lastModified;
 });
-
-document.getElementById("new").addEventListener("click", () => {
-  const filtered = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
-  displayTemples(filtered);
-});
-
-document.getElementById("large").addEventListener("click", () => {
-  const filtered = temples.filter(t => t.area > 90000);
-  displayTemples(filtered);
-});
-
-document.getElementById("small").addEventListener("click", () => {
-  const filtered = temples.filter(t => t.area < 10000);
-  displayTemples(filtered);
-});
-
-// Hamburger menu toggle
-const hamburger = document.querySelector('#hamburger');
-const navMenu = document.querySelector('#navMenu');
-
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('hidden');
-  hamburger.textContent = navMenu.classList.contains('hidden') ? '☰' : '✖';
-});
-
-// Footer date
-document.querySelector('#year').textContent = new Date().getFullYear();
-document.querySelector('#lastModified').textContent = document.lastModified;
