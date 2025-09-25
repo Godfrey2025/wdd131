@@ -102,3 +102,16 @@ footer {
   font-size: 0.9rem;
   color: #666;
 }
+
+
+nav a:hover {
+  background-color: #005fa3;
+  color: #fff;
+  text-decoration: underline;
+}
+
+nav a:hover {
+  background-color: #005fa3;
+  color: #fff;
+  text-decoration: underline;
+}
