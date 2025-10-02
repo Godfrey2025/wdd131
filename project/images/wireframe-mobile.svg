@@ -1,0 +1,19 @@
+<svg width="300" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="280" height="380" rx="16" fill="#fff" stroke="#bbb" stroke-width="2"/>
+  <rect x="30" y="25" width="240" height="30" rx="6" fill="#e67e22"/>
+  <text x="150" y="45" font-size="16" text-anchor="middle" fill="#fff">LOGO</text>
+  <rect x="30" y="65" width="60" height="20" rx="4" fill="#2c3e50"/>
+  <text x="60" y="80" font-size="12" text-anchor="middle" fill="#fff">☰ MENU</text>
+  <rect x="30" y="95" width="240" height="50" rx="8" fill="#eee"/>
+  <text x="150" y="125" font-size="14" text-anchor="middle" fill="#888">HERO IMAGE</text>
+  <rect x="30" y="155" width="240" height="30" rx="6" fill="#f4f4f4" stroke="#ccc"/>
+  <text x="150" y="175" font-size="12" text-anchor="middle" fill="#333">OVERVIEW</text>
+  <rect x="30" y="195" width="240" height="30" rx="6" fill="#f4f4f4" stroke="#ccc"/>
+  <text x="150" y="215" font-size="12" text-anchor="middle" fill="#333">PRODUCTS</text>
+  <rect x="30" y="235" width="240" height="30" rx="6" fill="#f4f4f4" stroke="#ccc"/>
+  <text x="150" y="255" font-size="12" text-anchor="middle" fill="#333">ABOUT</text>
+  <rect x="30" y="275" width="240" height="30" rx="6" fill="#f4f4f4" stroke="#ccc"/>
+  <text x="150" y="295" font-size="12" text-anchor="middle" fill="#333">CONTACT</text>
+  <rect x="30" y="335" width="240" height="30" rx="6" fill="#e67e22"/>
+  <text x="150" y="355" font-size="14" text-anchor="middle" fill="#fff">FOOTER</text>
+</svg>

@@ -18,3 +18,13 @@ h1, h2 {
 .heading-color {
   color: #2c3e50;
 }
+
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
