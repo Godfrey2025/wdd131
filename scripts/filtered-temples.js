@@ -56,8 +56,8 @@ const temples = [
     area: 116642,
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
-  }
-  // Add more temple objects if needed
+  },
+
 ];
 
 // Utility to parse year from dedicated string

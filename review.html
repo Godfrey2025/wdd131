@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Review confirmation page for WDD131 assignment.">
+  <meta name="author" content="Godfrey Gova">
+  <title>Review Submitted</title>
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/review.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Thank You!</h1>
+  </header>
+  <main>
+    <section class="confirmation">
+      <h2>Your review has been submitted.</h2>
+      <p>You have submitted <span id="reviewCount">0</span> review(s).</p>
+      <a href="form.html">Submit another review</a>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; Godfrey Gova | Zimbabwe</p>
+    <p><span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
