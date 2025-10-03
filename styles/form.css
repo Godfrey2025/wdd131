@@ -45,3 +45,30 @@ footer {
   font-size: 0.9rem;
   color: #666;
 }
+
+
+@media (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  main {
+    padding: 1rem;
+    border-radius: 0;
+  }
+
+  input, select, textarea {
+    font-size: 1rem;
+  }
+
+  .stars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  input[type="Post Review"] {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
