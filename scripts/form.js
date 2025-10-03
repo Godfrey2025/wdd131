@@ -18,3 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
     productSelect.appendChild(option);
   });
 });
+
+
+yearSpan.textContent = new Date().getFullYear();
+modifiedSpan.textContent = document.lastModified;
