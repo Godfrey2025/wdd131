@@ -12,9 +12,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const productSelect = document.getElementById("productName");
   if (productSelect) {
     products.forEach(product => {
-      const option = document.createElement("option");
-      option.value = product.name; // ✅ Use product name as value
-      option.textContent = product.name;
+  const option = document.createElement("option");
+  option.value = product.id; // use product id as value per requirements
+  option.textContent = product.name;
       productSelect.appendChild(option);
     });
   }

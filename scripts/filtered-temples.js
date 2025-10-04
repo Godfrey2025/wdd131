@@ -83,9 +83,13 @@ function displayTemples(templeArray) {
     location.textContent = `Location: ${temple.location}`;
     dedicated.textContent = `Dedicated: ${temple.dedicated}`;
     area.textContent = `Area: ${temple.area.toLocaleString()} sq ft`;
-    image.setAttribute('src', temple.imageUrl);
-    image.setAttribute('alt', `Image of ${temple.templeName}`);
-    image.setAttribute('loading', 'lazy');
+  image.setAttribute('src', temple.imageUrl);
+  image.setAttribute('alt', `Image of ${temple.templeName}`);
+  image.setAttribute('loading', 'lazy');
+  image.setAttribute('decoding', 'async');
+  // Set width/height to help prevent layout shifts (values approximate from image path 400x250)
+  image.width = 400;
+  image.height = 250;
 
     card.appendChild(name);
     card.appendChild(location);

@@ -3,12 +3,13 @@ body {
   margin: 0;
   padding: 1rem;
   background-color: #f9f9f9;
+  color: #222222;
 }
 
 main {
   max-width: 600px;
   margin: auto;
-  background: #fff;
+  background: #ffffff;
   padding: 2rem;
   border-radius: 8px;
 }
@@ -16,44 +17,68 @@ main {
 label, legend {
   display: block;
   margin-top: 1rem;
-  font-weight: bold;
+  font-weight: 600;
+  color: #222222;
 }
 
 input, select, textarea {
   width: 100%;
   padding: 0.5rem;
   margin-top: 0.5rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #222222;
 }
 
+.rating {
+  display: flex;
+  gap: 0.25rem;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.rating input[type="radio"] {
+  display: none; 
+}
 .rating label {
   display: inline-block;
-  margin-right: 0.5rem;
   font-size: 1.5rem;
-  color: #ccc;
+  color: #666666;
   cursor: pointer;
 }
 
-.rating input:checked ~ label {
-  color: #0077cc;
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #005A9C;
 }
 
-
-input[type="Post Review"] {
+input[type="submit"] {
   margin-top: 2rem;
-  background-color: #0077cc;
-  color: white;
+  background-color: #005A9C;
+  color: #ffffff;
   border: none;
   padding: 0.75rem;
   cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+}
+input[type="submit"]:hover {
+  background-color: #004777;
+}
+
+/* visible focus styles for keyboard users */
+input:focus, select:focus, textarea:focus, button:focus {
+  outline: 3px solid rgba(0,90,156,0.2);
+  outline-offset: 2px;
 }
 
 footer {
   text-align: center;
   margin-top: 2rem;
   font-size: 0.9rem;
-  color: #666;
+  color: #444444;
 }
-
 
 @media (max-width: 600px) {
   body {
@@ -70,45 +95,11 @@ footer {
   }
 
   .rating {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-direction: row; 
   }
 
   input[type="Post Review"] {
     width: 100%;
     font-size: 1rem;
   }
-}
-
-
-/* better inactive star color */
-.rating label {
-  color: #444444; /* replaces #ccc */
-}
-
-/* checked star / button color */
-.rating input:checked ~ label,
-input[type="Post Review"]:hover {
-  color: #005A9C; /
-  background-color: #005A9C; 
-  color: #ffffff; /* submit text */
-}
-
-/* footer darker text */
-footer {
-  color: #444444; /
-}
-
-input[type="Post Review"] {
-  margin-top: 2rem;
-  background-color: #005A9C;
-  color: #ffffff;
-  border: none;
-  padding: 0.75rem;
-  cursor: pointer;
-  border-radius: 4px;
-}
-input[type="submit"]:hover {
-  background-color: #004777;
 }
