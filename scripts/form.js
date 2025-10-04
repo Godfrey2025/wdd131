@@ -7,18 +7,27 @@ const products = [
   { id: "prod5", name: "Super Gizmo" }
 ];
 
-// Populate Product Select
+// Populate Product Select and Footer Info
 window.addEventListener('DOMContentLoaded', () => {
   const productSelect = document.getElementById("productName");
-  if (!productSelect) return;
-  products.forEach(product => {
-    const option = document.createElement("option");
-    option.value = product.id;
-    option.textContent = product.name;
-    productSelect.appendChild(option);
-  });
+  if (productSelect) {
+    products.forEach(product => {
+      const option = document.createElement("option");
+      option.value = product.id;
+      option.textContent = product.name;
+      productSelect.appendChild(option);
+    });
+  }
+
+  // Update Footer Info
+  const yearSpan = document.getElementById("year");
+  const modifiedSpan = document.getElementById("lastModified");
+
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+
+  if (modifiedSpan) {
+    modifiedSpan.textContent = document.lastModified;
+  }
 });
-
-
-yearSpan.textContent = new Date().getFullYear();
-modifiedSpan.textContent = document.lastModified;
