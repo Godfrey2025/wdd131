@@ -25,10 +25,18 @@ input, select, textarea {
   margin-top: 0.5rem;
 }
 
-.stars label {
+.rating label {
   display: inline-block;
   margin-right: 0.5rem;
+  font-size: 1.5rem;
+  color: #ccc;
+  cursor: pointer;
 }
+
+.rating input:checked ~ label {
+  color: #0077cc;
+}
+
 
 input[type="submit"] {
   margin-top: 2rem;

@@ -1,17 +1,25 @@
+
 document.addEventListener("DOMContentLoaded", () => {
+  // Review count logic
   const reviewCountKey = "reviewCount";
   let count = localStorage.getItem(reviewCountKey);
-
-  if (count === null) {
-    count = 0;
-  }
-
-  count = parseInt(count) + 1;
+  count = count ? parseInt(count) + 1 : 1;
   localStorage.setItem(reviewCountKey, count);
 
-  // Optional: Display the count on the page
   const counterDisplay = document.getElementById("reviewCounter");
   if (counterDisplay) {
     counterDisplay.textContent = `You have submitted ${count} review(s).`;
+  }
+
+  // Footer info logic
+  const yearSpan = document.getElementById("year");
+  const modifiedSpan = document.getElementById("lastModified");
+
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+
+  if (modifiedSpan) {
+    modifiedSpan.textContent = document.lastModified;
   }
 });
