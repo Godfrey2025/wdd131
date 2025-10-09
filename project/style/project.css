@@ -1,0 +1,237 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+  padding-bottom: 60px;
+}
+
+main {
+  padding: 2rem;
+}
+
+h1, h2 {
+  color: #2c3e50;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Navigation */
+header {
+  background-color: #2c3e50;
+  padding: 1rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #f39c12;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* Catalogue Page */
+.filter {
+  margin-bottom: 2rem;
+}
+
+.filter label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+select {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Contact Form */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #34495e;
+}
+
+/* Services Page */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.services-grid article {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.services-grid article:hover {
+  transform: scale(1.02);
+}
+
+.services-grid article h2 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  form {
+    padding: 1rem;
+  }
+}
+/* Place Page Specific Styles */
+
+
+/* Hamburger Button */
+#hamburger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+/* Navigation Menu */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  #hamburger {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background-color: #2c3e50;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}

@@ -1,34 +1,51 @@
+:root {
+  --primary-color: #005A9C;
+  --hover-color: #004777;
+  --text-color: #222222;
+  --bg-color: #f9f9f9;
+  --card-bg: #ffffff;
+  --border-color: #d0d0d0;
+  --focus-outline: rgba(0, 90, 156, 0.4);
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   padding: 1rem;
-  background-color: #f9f9f9;
-  color: #222222;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 main {
   max-width: 600px;
   margin: auto;
-  background: #ffffff;
+  background: var(--card-bg);
   padding: 2rem;
   border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 label, legend {
   display: block;
   margin-top: 1rem;
   font-weight: 600;
-  color: #222222;
+  color: var(--text-color);
 }
 
 input, select, textarea {
   width: 100%;
   padding: 0.5rem;
   margin-top: 0.5rem;
-  border: 1px solid #d0d0d0;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
-  background: #ffffff;
-  color: #222222;
+  background: var(--card-bg);
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 3px solid var(--focus-outline);
+  outline-offset: 2px;
 }
 
 .rating {
@@ -37,40 +54,50 @@ input, select, textarea {
   flex-direction: row-reverse;
   justify-content: flex-end;
 }
+
 .rating input[type="radio"] {
-  display: none; 
+  display: none;
 }
+
 .rating label {
-  display: inline-block;
   font-size: 1.5rem;
   color: #666666;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .rating input:checked ~ label,
 .rating label:hover,
 .rating label:hover ~ label {
-  color: #005A9C;
+  color: var(--primary-color);
 }
 
 input[type="submit"] {
   margin-top: 2rem;
-  background-color: #005A9C;
+  background-color: var(--primary-color);
   color: #ffffff;
   border: none;
   padding: 0.75rem;
   cursor: pointer;
   border-radius: 4px;
   font-weight: 600;
-}
-input[type="submit"]:hover {
-  background-color: #004777;
+  transition: background-color 0.3s ease;
 }
 
-/* visible focus styles for keyboard users */
-input:focus, select:focus, textarea:focus, button:focus {
-  outline: 3px solid rgba(0,90,156,0.2);
-  outline-offset: 2px;
+input[type="submit"]:hover {
+  background-color: var(--hover-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+  color: var(--hover-color);
 }
 
 footer {
@@ -78,6 +105,18 @@ footer {
   margin-top: 2rem;
   font-size: 0.9rem;
   color: #444444;
+}
+
+.confirmation {
+  text-align: center;
+  padding: 2rem;
+  background-color: #e6f0fa;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
 }
 
 @media (max-width: 600px) {
@@ -95,7 +134,7 @@ footer {
   }
 
   .rating {
-    flex-direction: row; 
+    flex-direction: row;
   }
 
   input[type="Post Review"] {

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Catalogue | Godanz Pvt Ltd</title>
+  <link rel="stylesheet" href="styles/project.css">
+  <script src="scripts/project.js" defer></script>
+</head>
+<body>
+  <header>
+  <nav>
+    <button id="hamburger">&#9776;</button>
+    <ul id="navMenu" class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="catalogue.html">Catalogue</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="services.html">Services</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+ <main>
+    <h1>Product Catalogue</h1>
+
+    <section class="filter">
+      <label for="category">Filter by Category:</label>
+      <select id="category">
+        <option value="all">All</option>
+        <option value="construction">Construction</option>
+        <option value="interior">Interior Design</option>
+        <option value="sustainable">Sustainable Materials</option>
+      </select>
+    </section>
+
+    <section id="product-list" class="products">
+      <!-- Products will be dynamically inserted here -->
+    </section>
+  </main>
+
+  <footer>
+  <p>&copy; Godfrey Gova | Zimbabwe</p>
+    <p><span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
